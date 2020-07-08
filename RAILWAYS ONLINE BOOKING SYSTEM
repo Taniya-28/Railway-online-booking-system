@@ -1,0 +1,180 @@
+import java.io.*;
+import java.util.*;
+class Railway
+{
+    public static void main(String args[])
+    {
+
+        System.out.println("\t\t!!!!!!!!! WELCOME TO IRCTC !!!!!!!!!");
+        System.out.println("\tYOU CAN TRAVEL ONLY INTRA DISTRICT:(VIJAYAWADA \n \tTHERE IS ONLY ONE TRAIN (VJD EXPRESS) RUNNING \n \tYOU CAN ONLY BOOK TICKETS FOR TOMORROW");
+        System.out.println("ENTER YOUR LOGIN ID: ");
+        Scanner sc=new Scanner(System.in);
+        String sk=sc.next();
+        double d=Math.random()*100000;
+        int i=(int)d;
+        System.out.println("ENTER CAPTCHA:"+i);
+        Scanner ss=new Scanner(System.in);
+        int cip=ss.nextInt();
+        if(cip==i)
+        {
+            System.out.println("select your boarding station by selecting the number");
+            System.out.println("1.IPURUPALEM\n2.BAPATLA\n3.NIDUBROLU\n4.TSUNDURU\n5.TENALI\n6.DUGGIRALA\n7.CHILUVUR\n8.PEDDAVADLAPUDI\n9.KRISHNACANAL AJUNCTION\n10.KRISHNACANALB JUNCTION\n11.KRISHNACANALCJUNCTION\n12.KRISHNACANALJUNCTION");
+            Scanner bps=new Scanner(System.in);
+            int bp=bps.nextInt();
+            System.out.println("CHARGES BETWEEN EACH STATION IS 5 RUPEES");
+            System.out.println("select your destinaton by selecting the number");
+            System.out.println("1.IPURUPALEM\n2.BAPATLA\n3.NIDUBROLU\n4.TSUNDURU\n5.TENALI\n6.DUGGIRALA\n7.CHILUVUR\n8.PEDDAVADLAPUDI\n9.KRISHNACANAL AJUNCTION\n10.KRISHNACANALB JUNCTION\n11.KRISHNACANALCJUNCTION\n12.KRISHNACANALJUNCTION");
+            Scanner ds=new Scanner(System.in);
+            int dp=ds.nextInt();
+            System.out.println("ENTER NO.OF ADULTS:");
+            Scanner an=new Scanner(System.in);
+            int a=an.nextInt();
+            System.out.println("ENTER NO.OF CHILDREN:");
+            Scanner cn=new Scanner(System.in);
+            int c=cn.nextInt();
+            int cost=Math.abs(dp-bp)*5*a+(a)/2*5;
+            System.out.println("TOTAL BILL : "+cost+" RUPEES");
+            double bg=Math.random();
+            String bogi="";
+            if(bg>0.0&&bg<0.1)
+            {
+                bogi="s1";
+            }
+            if(bg>0.1&&bg<0.2)
+            {
+                bogi="s2";
+            }
+            if(bg>0.2&&bg<0.3)
+            {
+                bogi="s3";
+            }
+            if(bg>0.3&&bg<0.4)
+            {
+                bogi="s4";
+            }
+            if(bg>0.4&&bg<0.5)
+            {
+                bogi="s5";
+            }
+            if(bg>0.5&&bg<0.6)
+            {
+                bogi="s6";
+            }
+            if(bg>0.6&&bg<0.7)
+            {
+                bogi="s7";
+            }
+            if(bg>0.7&&bg<0.8)
+            {
+                bogi="s8";
+            }
+            if(bg>0.8&&bg<0.9)
+            {
+                bogi="s9";
+            }
+            if(bg>0.9&&bg<1.0)
+            {
+                bogi="s10";
+            }
+            double sa=Math.random()*100;
+            int s=(int)sa;
+            int h[]=new int[10];
+            int dd=0;
+            int ii;
+            int tem=0;
+            for(ii=0;ii<a;ii++)
+            {
+            
+               double sd=Math.random()*100;
+                dd=(int)sd;
+                tem=h[ii];
+                h[ii]=dd;
+                dd=tem;
+            
+            }
+            int n=s%8;
+            int k=dd%8;
+            System.out.println("your seats are:"+s+"\n "+dd+" \nin bogi "+bogi);
+            switch(n)
+            {
+                case 1:
+                System.out.println("UPPER");
+                break;
+                case 2:
+                System.out.println("MIDDLE");
+                break;
+                case 3:
+                System.out.println("LOWER");
+                break;
+                case 4:
+                System.out.println("LOWER");
+                break;
+                case 5:
+                System.out.println("MIDDLE");
+                break;
+                case 6:
+                System.out.println("UPPER");
+                break;
+                case 7:
+                System.out.println("SIDE UPPER");
+                break;
+                case 0:
+                System.out.println("SIDE LOWER");
+                break;
+                default:
+                System.out.println("NO BERTH");
+        }
+        switch(k)
+            {
+                case 1:
+                System.out.println("UPPER");
+                break;
+                case 2:
+                System.out.println("MIDDLE");
+                break;
+                case 3:
+                System.out.println("LOWER");
+                break;
+                case 4:
+                System.out.println("LOWER");
+                break;
+                case 5:
+                System.out.println("MIDDLE");
+                break;
+                case 6:
+                System.out.println("UPPER");
+                break;
+                case 7:
+                System.out.println("SIDE UPPER");
+                break;
+                case 0:
+                System.out.println("SIDE LOWER");
+                break;
+                default:
+                System.out.println("NO BERTH");
+            }
+                System.out.println("enter your debit card number :");
+                Scanner dcn=new Scanner(System.in);
+                long dc=dcn.nextLong();
+                System.out.println("enter the expiry date");
+                Scanner exd=new Scanner(System.in);
+                String ed=exd.nextLine();
+               
+                double o=Math.random()*100000;
+                int kk=(int)o;
+                 System.out.println("ENTER THE OTP GIVEN ON YOUR SCREEN: "+kk);
+                Scanner ot=new Scanner(System.in);
+                int otp=ot.nextInt();
+                if(kk==otp)
+                {
+                    System.out.println("PAYMENT SUCCESSFUL");
+                    System.out.println("your seats are:"+s+" "+dd+" in bogi "+bogi);
+                }
+                else
+                System.out.println("PAYMENT UN-SUCCESSFUL");
+        }
+         else
+        System.out.println("invalid captcha");
+    }
+   
+}
